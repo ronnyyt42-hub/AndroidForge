@@ -253,7 +253,7 @@ jobs:
       # (Flutter 3.27.0 is already in the Docker image as the default.)
       # ---------------------------------------------------------------------
       - name: Switch Flutter version (if needed)
-        if: steps.toolchain.outputs.needs_flutter == 'true'
+        if: false
         run: |
           DETECTED="${{ steps.toolchain.outputs.flutter_version }}"
           CURRENT=$(flutter --version | head -1 | awk '{print $4}')
